@@ -81,10 +81,10 @@ def load_data(city, month, day):
     df['day_name'] = df['Start Time'].dt.weekday_name
 
     if month != 'all':
-        df.loc[(df['month'] == month)]
+        df = df.loc[(df['month'] == month)]
 
     if day != 'all':
-        df.loc[df['day_name'] == day]
+        df = df.loc[df['day_name'] == day]
 
     return df
 
